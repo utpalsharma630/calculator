@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    <h2 class="text-3xl font-semibold text-center my-4">Calculator</h2>
+    <div class="md:w-96 w-full bg-cyan-600  m-auto px-5 border-2 rounded border-slate-800">
+        <div class="md:w-70 w-full px-3 bg-gray-300 border-2 rounded  border-emerald-800 flex justify-end  mt-5">
+            <h2 id="display" class="md:w-[18rem]  w-full bg-white mx-3 border-2 border-gray-300 rounded  m-auto my-3 h-10 shadow text-end items-end"></h2>
+        </div>
+        <div class="md:w-70 w-full  m-auto bg-gray-300 p-4 my-3 rounded shadow-xl grid grid-cols-4 gap-3 ">
+            
+            <button id="btn" class="border-2 bg-lime-300 hover:bg-black hover:text-white px-2 py-1 my-1 rounded" onclick="document.getElementById('display').innerText=('')">AC</button>
+            <button id="btn" class="border-2 bg-lime-300 hover:bg-black hover:text-white px-2 py-1 my-1 rounded" onclick="document.getElementById('display').innerText+=('(')">(</button>
+            <button id="btn" class="border-2 bg-lime-300 hover:bg-black hover:text-white px-2 py-1 my-1 rounded" onclick="document.getElementById('display').innerText+=(' )')">)</button>
+            <button id="btn" class="border-2 bg-lime-300 hover:bg-black hover:text-white px-2 py-1 my-1 rounded" onclick="document.getElementById('display').innerText+=('/')">÷</button>
+
+            <button class="border-2 bg-lime-300 hover:bg-black hover:text-white  px-2 py-1 my-1 rounded" onclick="document.getElementById('display').innerText+=('7')">7</button>
+            <button class="border-2 bg-lime-300 hover:bg-black hover:text-white px-2 py-1 my-1 rounded" onclick="document.getElementById('display').innerText+=('8')">8</button>
+            <button class="border-2 bg-lime-300 hover:bg-black hover:text-white px-2 py-1 my-1 rounded" onclick="document.getElementById('display').innerText+=('9')">9</button>
+            <button class="border-2 bg-lime-300 hover:bg-black hover:text-white px-2 py-1 my-1 rounded" onclick="document.getElementById('display').innerText+=('*')">*</button>
+
+            <button class="border-2 bg-lime-300 hover:bg-black hover:text-white px-2 py-1 my-1 rounded" onclick="document.getElementById('display').innerText+=('4')">4</button>
+            <button class="border-2 bg-lime-300 hover:bg-black hover:text-white px-2 py-1 my-1 rounded" onclick="document.getElementById('display').innerText+=('5')">5</button>
+            <button class="border-2 bg-lime-300 hover:bg-black hover:text-white px-2 py-1 my-1 rounded" onclick="document.getElementById('display').innerText+=('6')">6</button>
+            <button class="border-2 bg-lime-300 hover:bg-black hover:text-white px-2 py-1 my-1 rounded" onclick="document.getElementById('display').innerText+=('-')">-</button>
+
+            <button class="border-2 bg-lime-300 hover:bg-black hover:text-white px-2 py-1 my-1 rounded" onclick="document.getElementById('display').innerText+=('1')">1</button>
+            <button class="border-2 bg-lime-300 hover:bg-black hover:text-white px-2 py-1 my-1 rounded" onclick="document.getElementById('display').innerText+=('2')">2</button>
+            <button class="border-2 bg-lime-300 hover:bg-black hover:text-white px-2 py-1 my-1 rounded" onclick="document.getElementById('display').innerText+=('3')">3</button>
+            <button class="border-2 bg-lime-300 hover:bg-black hover:text-white px-2 py-1 my-1 rounded" onclick="document.getElementById('display').innerText+=('+')">+</button>
+
+            <button class="border-2 bg-lime-300 hover:bg-black hover:text-white px-2 py-1 my-1 rounded" onclick="document.getElementById('display').innerText+=('0')">0</button>
+            <button class="border-2 bg-lime-300 hover:bg-black hover:text-white px-2 py-1 my-1 rounded" onclick="document.getElementById('display').innerText+=('.')">.</button>
+            <button class="border-2  bg-red-400 hover:bg-black hover:text-white px-2 py-1 my-1 rounded" onclick="document.getElementById('display').innerText=document.getElementById('display').innerText.slice('0',-1)">Del</button>
+            <button class="border-2 bg-lime-300 hover:bg-black hover:text-white px-2 py-1 my-1 rounded" onclick="document.getElementById('display').innerText = eval(document.getElementById('display').innerText)">=</button>
+        </div>
+    </div>
+</body>
+</html>
